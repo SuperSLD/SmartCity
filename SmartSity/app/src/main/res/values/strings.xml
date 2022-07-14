@@ -31,6 +31,8 @@
     <string name="auth_reg_sms_subtitle">Введите код из СМС-сообщения</string>
     <string name="auth_reg_sms_resend_btn">Отправить код повторно</string>
 
+    <string name="schedule_title">Расписание мероприятий</string>
+
     <string name="profile_team_title">Моя команда</string>
     <string name="profile_team_captain">Капитан</string>
     <string name="profile_team_join">Вступить в команду</string>
