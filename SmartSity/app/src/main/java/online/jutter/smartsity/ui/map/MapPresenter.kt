@@ -5,4 +5,5 @@ import online.jutter.supersld.common.base.BasePresenter
 
 @InjectViewState
 class MapPresenter: BasePresenter<MapView>() {
+
 }

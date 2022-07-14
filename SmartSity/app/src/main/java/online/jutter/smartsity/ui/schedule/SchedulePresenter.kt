@@ -6,4 +6,5 @@ import online.jutter.supersld.common.base.BasePresenter
 
 @InjectViewState
 class SchedulePresenter: BasePresenter<ScheduleView>() {
+
 }

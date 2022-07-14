@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Primary -->
-    <color name="colorPrimary">#0596FF</color>
-    <color name="colorPrimarySecondary">#0596FF</color>
+    <color name="colorPrimary">#27A3DE</color>
+    <color name="colorPrimarySecondary">#2F83CF</color>
     <color name="colorPrimaryLite">#3EACFB</color>
     <color name="colorAccent">#7EC9FF</color>
     <color name="colorAccentLite">#A2D8FF</color>
@@ -11,6 +11,7 @@
     <color name="colorBackgroundSecondary">#FFFFFF</color>
     <color name="colorBackgroundDark">#F9FBFC</color>
     <color name="colorBackgroundDarkSecondary">#F1F1F1</color>
+    <color name="colorBackgroundGray">#C7C7C7</color>
 
     <!-- Text -->
     <color name="colorTextPrimary">#292929</color>

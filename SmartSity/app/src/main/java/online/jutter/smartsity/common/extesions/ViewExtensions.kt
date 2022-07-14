@@ -1,9 +1,11 @@
 package online.jutter.smartsity.common.extesions
 
 import android.app.ActionBar
+import android.text.InputFilter
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.Transformation
+import android.widget.EditText
 import androidx.core.content.ContextCompat
 
 fun View.getColor(id: Int) = ContextCompat.getColor(context, id)
@@ -14,6 +16,13 @@ fun View.hide(vType: Int = View.GONE) {
 }
 fun View.show() {
     visibility = View.VISIBLE
+}
+
+/**
+ * Установка максимальной длинны на тектовое поле.
+ */
+fun EditText.limitLength(maxLength: Int) {
+    filters = arrayOf(InputFilter.LengthFilter(maxLength))
 }
 
 /**

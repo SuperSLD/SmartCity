@@ -23,6 +23,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    
+    buildFeatures {
+        viewBinding = true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -78,6 +83,15 @@ dependencies {
     implementation 'online.jutter.supersld:jutter_ui_kit:1.4.10'
     implementation 'online.jutter.supersld:roadmapview:0.1.4'
 
+    // ввод с маской
+    implementation 'com.redmadrobot:input-mask-android:6.0.0'
+
+    //Пин
+    implementation 'io.github.chaosleung:pinview:1.4.4'
+
     // location play services
     implementation 'com.google.android.gms:play-services-location:20.0.0'
+
+    // ViewBinding helper
+    implementation 'com.github.kirich1409:viewbindingpropertydelegate:1.4.7'
 }
