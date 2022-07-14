@@ -4,7 +4,7 @@ import org.koin.dsl.module
 
 fun appModule() = module {
     provideDataFlow()
-    provideUeeCases()
+    provideUseCases()
     provideControllers()
     provideNetModules()
 }
