@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">SmartSity</string>
 
+    <!-- Navigation -->
+    <string name="news_navigation">Новости</string>
+    <string name="schedule_navigation">Расписание</string>
+    <string name="map_navigation">Карта</string>
+    <string name="leaderboard_navigation">Победители</string>
+    <string name="profile_navigation">Пользователь</string>
+
     <string name="auth_login_title">Вход</string>
     <string name="auth_number">Номер телефона</string>
     <string name="auth_login">Войти</string>
