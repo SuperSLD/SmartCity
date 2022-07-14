@@ -35,9 +35,11 @@ class PinFragment : BaseFragment(R.layout.fragment_pin), MvpView {
             onBackPressed()
         }
 
+        tvPhone.text = arguments?.getString(ARG_NUMBER)!!
+
         firstPinView.addTextChangedListener {
             if (it.toString().length == 4) {
-                presenter.openMain()
+                presenter.openMain(arguments?.getString(ARG_NUMBER)!!)
             }
         }
     }

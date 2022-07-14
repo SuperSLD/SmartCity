@@ -37,7 +37,7 @@ object Screens {
     data class Pin(
         val number: String,
     ) : SupportAppScreen() {
-        override fun getFragment() = PinFragment()
+        override fun getFragment() = PinFragment.createInstance(number)
     }
 
     object FlowMain : SupportAppScreen() {
