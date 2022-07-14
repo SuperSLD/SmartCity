@@ -1,4 +1,6 @@
 package online.jutter.smartsity.ui.schedule
 
-class ScheduleView {
+import com.arellomobile.mvp.MvpView
+
+interface ScheduleView: MvpView {
 }

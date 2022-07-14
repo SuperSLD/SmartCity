@@ -130,7 +130,7 @@ class MainContainerFragment: BaseFragment(R.layout.fragment_main_container), Mai
         fun create(): MainContainerFragment {
             val fragment = MainContainerFragment()
             val arg = Bundle()
-            arg.putInt(ARG_POSITION, 2)
+            arg.putInt(ARG_POSITION, 0)
             fragment.arguments = arg
 
             return fragment

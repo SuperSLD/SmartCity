@@ -1,4 +1,7 @@
 package online.jutter.smartsity.ui.profile
 
-class ProfileView {
+import online.jutter.smartsity.common.base.BaseView
+import online.jutter.smartsity.ui.map.MapView
+
+interface ProfileView: BaseView {
 }
