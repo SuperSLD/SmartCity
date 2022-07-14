@@ -8,6 +8,7 @@ import online.jutter.supersld.common.PreferenceHelper
 const val MAIN_PREFS = "main_prefs"
 
 const val IS_DAY_THEME = "is_day_theme"
+const val PHONE = "phone"
 const val HOME_MARKER = "home_marker"
 
 fun Context.saveIsDayTheme(day: Boolean) {
@@ -17,6 +18,15 @@ fun Context.saveIsDayTheme(day: Boolean) {
 fun Context.getIsDayTheme(): Boolean {
     return PreferenceHelper.customPrefs(this, MAIN_PREFS).getBoolean(IS_DAY_THEME, true)
 }
+
+fun Context.savePhone(string: String) {
+    PreferenceHelper.customPrefs(this, MAIN_PREFS).edit().putString(PHONE, string).apply()
+}
+
+fun Context.getPhone(): String? {
+    return PreferenceHelper.customPrefs(this, MAIN_PREFS).getString(PHONE, "")
+}
+
 
 fun Context.saveHomeMarker(marker: RMMarker) {
     PreferenceHelper.customPrefs(this, MAIN_PREFS).edit().putString(HOME_MARKER, Gson().toJson(marker)).apply()

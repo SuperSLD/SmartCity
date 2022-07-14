@@ -2,12 +2,15 @@ package online.jutter.smartsity.di
 
 import online.jutter.smartsity.domain.controllers.BottomVisibilityController
 import online.jutter.smartsity.domain.controllers.ChangeBottomTabController
+import online.jutter.smartsity.domain.usecases.GetPhoneUseCase
+import online.jutter.smartsity.domain.usecases.IsAuthUseCase
+import online.jutter.smartsity.domain.usecases.SavePhoneUseCase
 import org.koin.core.module.Module
 
 fun Module.provideUeeCases() {
-//    single { GetThemeIsDayUseCase(get()) }
-//    single { SaveThemeIsDayUseCase(get()) }
-//    single { GetHomeMarkerUseCase(get()) }
+    single { GetPhoneUseCase(get()) }
+    single { SavePhoneUseCase(get()) }
+    single { IsAuthUseCase(get()) }
 //    single { SaveHomeMarkerUseCase(get()) }
 }
 
