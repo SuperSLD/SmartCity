@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary -->
+    <color name="colorPrimary">#0596FF</color>
+    <color name="colorPrimarySecondary">#0596FF</color>
+    <color name="colorPrimaryLite">#3EACFB</color>
+    <color name="colorAccent">#7EC9FF</color>
+    <color name="colorAccentLite">#A2D8FF</color>
+
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorBackgroundSecondary">#FFFFFF</color>
+    <color name="colorBackgroundDark">#F9FBFC</color>
+    <color name="colorBackgroundDarkSecondary">#F1F1F1</color>
+
+    <!-- Text -->
+    <color name="colorTextPrimary">#333333</color>
+    <color name="colorTextSecondary">#909DA9</color>
+    <color name="colorTextWhite">#FFFFFF</color>
+    <color name="colorTextToastWhite">#FFFFFF</color>
+
+    <!-- Navigation -->
+    <color name="colorBottomNavigation">#ABBBCC</color>
+
+    <!-- Gradient -->
+    <color name="colorGradientTop">#C7ACFF</color>
+    <color name="colorGradientTopSecondary">#EA91FF</color>
+
+    <!-- Button -->
+    <color name="colorButtonDisabled">#C8C7CC</color>
+
+    <!-- Diagram -->
+    <color name="colorDiagram1">#ACD7FF</color>
+    <color name="colorDiagram2">#2579C6</color>
+    <color name="colorDiagram3">#C7ACFF</color>
+    <color name="colorDiagram4">#8C72FF</color>
+    <color name="colorDiagram5">#EA91FF</color>
+    <color name="colorDiagram6">#075093</color>
+    <color name="colorDiagram7">#6163C5</color>
+    <color name="colorDiagram8">#EC73CA</color>
+
+    <!-- Toast -->
+    <color name="colorToastBack">#CC000000</color>
+
+    <!-- Border -->
+    <color name="colorBorder">#E1E1E1</color>
+
+    <!-- Other -->
+    <color name="colorAlertRed">#FF6645</color>
+    <color name="colorHouseMarker">#FFD15B</color>
+
+    <!-- Notification -->
+    <color name="colorNotification">#DA5B45</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorStatusBar">#7AF0F2F5</color>
+    <color name="colorNavigationBar">#7AF0F2F5</color>
+</resources>
