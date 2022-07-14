@@ -8,6 +8,17 @@
     <string name="leaderboard_navigation">Победители</string>
     <string name="profile_navigation">Пользователь</string>
 
+    <!-- News -->
+    <string name="event_title_example">Завтра открытие</string>
+    <string name="event_info_example">Завтра первый день игр умных городов</string>
+    <string name="date_example">12.09.22</string>
+    <string name="news_title">Новости\nсоревнований</string>
+    <string name="live_record_title">Прямые\nтрансляции</string>
+
+    <!-- Leaderboard -->
+    <string name="competition_name">Заплыв 200 м</string>
+    <string name="competition_place">Спорткомплекс Олимп</string>
+
     <string name="auth_login_title">Вход</string>
     <string name="auth_number">Номер телефона</string>
     <string name="auth_login">Войти</string>
@@ -15,4 +26,9 @@
     <string name="auth_reg_sms_title">Подтвердите номер</string>
     <string name="auth_reg_sms_subtitle">Введите код из СМС-сообщения</string>
     <string name="auth_reg_sms_resend_btn">Отправить код повторно</string>
+
+    <string name="profile_team_title">Моя команда</string>
+    <string name="profile_team_captain">Капитан</string>
+    <string name="profile_team_join">Вступить в команду</string>
+    <string name="profile_results">Мои результаты</string>
 </resources>
