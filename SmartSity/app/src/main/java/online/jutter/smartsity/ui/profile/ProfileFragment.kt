@@ -9,6 +9,7 @@ import online.jutter.smartsity.databinding.FragmentProfileBinding
 import online.jutter.smartsity.ui.ext.SpaceBetweenItemDecoration
 import online.jutter.smartsity.ui.ext.dpToPx
 import online.jutter.supersld.common.base.BaseFragment
+import online.jutter.supersld.extensions.addSystemTopPadding
 import org.koin.android.ext.android.bind
 
 class ProfileFragment: BaseFragment(R.layout.fragment_profile){
@@ -26,6 +27,8 @@ class ProfileFragment: BaseFragment(R.layout.fragment_profile){
 
     private fun initUi() {
         with(binding) {
+            vgContent.addSystemTopPadding()
+
             rvTeam.run {
                 adapter = teamAdapter
                 layoutManager = LinearLayoutManager(

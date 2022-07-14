@@ -17,7 +17,7 @@ class FlowProfileFragment: FlowFragment(ROUTER) {
             navigator.applyCommands(
                 arrayOf(
                     BackTo(null),
-                    Replace(Screens.Map)
+                    Replace(Screens.Profile)
                 )
             )
         }

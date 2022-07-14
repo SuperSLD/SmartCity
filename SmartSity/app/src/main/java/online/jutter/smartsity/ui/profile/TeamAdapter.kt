@@ -22,7 +22,7 @@ class TeamAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return 0
     }
 
     inner class TeamViewHolder(binding: ItemTeamBinding) : RecyclerView.ViewHolder(binding.root) {

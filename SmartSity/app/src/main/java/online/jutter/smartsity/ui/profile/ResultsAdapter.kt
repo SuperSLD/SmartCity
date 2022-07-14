@@ -22,7 +22,7 @@ class ResultsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return 0
     }
 
     inner class ResultsViewHolder(binding: ItemResultsBinding) : RecyclerView.ViewHolder(binding.root) {
