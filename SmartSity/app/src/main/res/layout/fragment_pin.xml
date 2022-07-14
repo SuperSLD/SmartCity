@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="16dp"
+        android:clipToPadding="false"
+>
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+    >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+        >
+            <ImageButton
+                    android:id="@+id/icClose"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="?attr/actionBarItemBackground"
+                    app:srcCompat="@drawable/ic_arrow_left"
+                    app:tint="@color/colorPrimary"
+                    android:layout_gravity="start"
+            />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextPrimary"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/auth_reg_sms_title"
+                    android:gravity="center"
+            />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextPrimary"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="24sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="+7 (961) 122-95-81"
+                    android:gravity="center"
+            />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextSecondary"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="14sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/auth_reg_sms_subtitle"
+                    android:gravity="center"
+            />
+
+            <com.chaos.view.PinView
+                    android:id="@+id/firstPinView"
+                    style="@style/PinWidget.PinView"
+                    android:layout_marginTop="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="true"
+                    android:inputType="number"
+                    android:itemBackground="@color/colorBackgroundDark"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="34sp"
+                    android:fontFamily="@font/roboto_regular"
+                    app:cursorColor="@color/colorPrimary"
+                    app:cursorWidth="2dp"
+                    app:itemCount="4"
+                    app:itemHeight="56dp"
+                    app:itemRadius="12dp"
+                    app:itemSpacing="16dp"
+                    app:itemWidth="56dp"
+                    app:viewType="rectangle"
+                    app:lineColor="@drawable/selector_pin_view"
+            />
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/auth_reg_sms_resend_btn"
+                    style="@style/ButtonSolid"
+                    android:enabled="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="40dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="14sp"
+            />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

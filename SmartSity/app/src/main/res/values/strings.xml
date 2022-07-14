@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SmartSity</string>
+
+    <string name="auth_login_title">Вход</string>
+    <string name="auth_number">Номер телефона</string>
+    <string name="auth_login">Войти</string>
+    <string name="auth_go_to_reg">Зарегестрироваться</string>
+    <string name="auth_reg_sms_title">Подтвердите номер</string>
+    <string name="auth_reg_sms_subtitle">Введите код из СМС-сообщения</string>
+    <string name="auth_reg_sms_resend_btn">Отправить код повторно</string>
 </resources>
