@@ -1,4 +1,6 @@
 package online.jutter.smartsity.ui.map
 
-class MapView {
+import com.arellomobile.mvp.MvpView
+
+interface MapView: MvpView {
 }

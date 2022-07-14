@@ -13,8 +13,8 @@
     <color name="colorBackgroundDarkSecondary">#F1F1F1</color>
 
     <!-- Text -->
-    <color name="colorTextPrimary">#333333</color>
-    <color name="colorTextSecondary">#909DA9</color>
+    <color name="colorTextPrimary">#292929</color>
+    <color name="colorTextSecondary">#CACACA</color>
     <color name="colorTextWhite">#FFFFFF</color>
     <color name="colorTextToastWhite">#FFFFFF</color>
 

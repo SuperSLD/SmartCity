@@ -8,4 +8,11 @@
     <string name="map_navigation">Карта</string>
     <string name="leaderboard_navigation">Победители</string>
     <string name="profile_navigation">Пользователь</string>
+
+    <!-- News -->
+    <string name="event_title_example">Завтра открытие</string>
+    <string name="event_info_example">Завтра первый день игр умных городов</string>
+    <string name="date_example">12.09.22</string>
+    <string name="news_title">Новости\nсоревнований</string>
+    <string name="live_record_title">Прямые\nтрансляции</string>
 </resources>
