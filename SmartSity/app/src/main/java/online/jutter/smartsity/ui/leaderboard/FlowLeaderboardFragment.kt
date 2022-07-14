@@ -9,7 +9,7 @@ import ru.terrakok.cicerone.commands.Replace
 class FlowLeaderboardFragment: FlowFragment(ROUTER) {
 
     companion object {
-        const val ROUTER = "MAP_ROUTER"
+        const val ROUTER = "LEADERBOARD_ROUTER"
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

@@ -15,4 +15,9 @@
     <string name="date_example">12.09.22</string>
     <string name="news_title">Новости\nсоревнований</string>
     <string name="live_record_title">Прямые\nтрансляции</string>
+
+    <!-- Leaderboard -->
+    <string name="competition_name">Заплыв 200 м</string>
+    <string name="competition_place">Спорткомплекс Олимп</string>
+
 </resources>
