@@ -1,5 +1,6 @@
-package online.jutter.smartsity.ui.splash
+package online.jutter.smartsity.ui.auth.registration
 
+import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpView
 import kotlinx.coroutines.delay
 import online.jutter.smartsity.Screens
@@ -8,20 +9,11 @@ import online.jutter.supersld.common.base.BasePresenter
 import online.jutter.supersld.extensions.launchIO
 import online.jutter.supersld.extensions.withUI
 
-class SplashPresenter : BasePresenter<MvpView>() {
+@InjectViewState
+class RegistrationPresenter : BasePresenter<MvpView>() {
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
-        start()
-    }
-
-    private fun start() {
-        launchIO(createEmptyHandler()) {
-            delay(2000)
-            withUI {
-                router?.newRootScreen(Screens.Login)
-            }
-        }
     }
 
     fun back() {
