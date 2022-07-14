@@ -1,5 +1,7 @@
 package online.jutter.smartsity.di
 
+import online.jutter.smartsity.domain.controllers.BottomVisibilityController
+import online.jutter.smartsity.domain.controllers.ChangeBottomTabController
 import org.koin.core.module.Module
 
 fun Module.provideUeeCases() {
@@ -10,7 +12,7 @@ fun Module.provideUeeCases() {
 }
 
 fun Module.provideControllers() {
-//    single { SelectMarkerController() }
-//    single { NavigationController() }
+    single { ChangeBottomTabController() }
+    single { BottomVisibilityController() }
 //    single { SelectRoomController() }
 }

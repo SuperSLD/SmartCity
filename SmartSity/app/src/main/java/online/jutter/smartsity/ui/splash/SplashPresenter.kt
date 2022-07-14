@@ -19,7 +19,7 @@ class SplashPresenter : BasePresenter<MvpView>() {
         launchIO(createEmptyHandler()) {
             delay(2000)
             withUI {
-                //router?.newRootScreen(Screens.)
+                router?.newRootScreen(Screens.FlowMain)
             }
         }
     }
