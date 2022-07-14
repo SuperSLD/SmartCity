@@ -37,7 +37,7 @@ class PinFragment : BaseFragment(R.layout.fragment_pin), MvpView {
 
         firstPinView.addTextChangedListener {
             if (it.toString().length == 4) {
-                onBackPressed()
+                presenter.openMain()
             }
         }
     }
