@@ -16,6 +16,7 @@
         />
 
     <ImageView
+        android:id="@+id/ivMedal"
         android:layout_width="19dp"
         android:layout_height="19dp"
         android:src="@drawable/bg_medal_empty"/>
