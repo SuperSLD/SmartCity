@@ -1,5 +1,9 @@
 package online.jutter.smartsity.domain.models
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class NewsLocal(
     val id: Long,
     val title: String,
@@ -7,4 +11,4 @@ data class NewsLocal(
     val image: String,
     val shortText: String,
     val dateString: String
-)
+) : Parcelable
