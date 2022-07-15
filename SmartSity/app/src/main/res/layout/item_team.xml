@@ -16,6 +16,7 @@
         tools:text="Юра Воронцов"/>
 
     <TextView
+        android:id="@+id/tvCaptainFlag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/profile_team_captain"

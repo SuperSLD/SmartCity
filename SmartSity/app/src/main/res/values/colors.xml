@@ -39,6 +39,11 @@
     <color name="colorDiagram7">#6163C5</color>
     <color name="colorDiagram8">#EC73CA</color>
 
+    <!--  Medals  -->
+    <color name="colorMedalGold">#FFE03F</color>
+    <color name="colorMedalSilver">#D9D9D9</color>
+    <color name="colorMedalBronze">#F0AD00</color>
+
     <!-- Toast -->
     <color name="colorToastBack">#CC000000</color>
 
