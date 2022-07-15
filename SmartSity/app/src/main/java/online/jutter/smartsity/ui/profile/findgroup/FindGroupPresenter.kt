@@ -23,9 +23,7 @@ class FindGroupPresenter : BasePresenter<FindGroupView>() {
     }
 
     fun onTeamClick(team: TeamLocal) {
-//        selectRoomController.select(room)
-//        bottomVisibilityController.hide()
-        back()
+        router?.navigateTo(Screens.JoinTeam(team))
     }
 
     fun onCreateTeam() {

@@ -6,8 +6,10 @@ import online.jutter.smartsity.data.net.models.LeaderboardResponse
 import online.jutter.smartsity.domain.models.NewsLocal
 import online.jutter.smartsity.domain.models.schedule.ScheduleLocal
 import online.jutter.smartsity.data.net.models.MemberResponse
+import online.jutter.smartsity.domain.models.TeamLocal
 import online.jutter.smartsity.ui.auth.login.LoginFragment
 import online.jutter.smartsity.ui.auth.pincode.PinFragment
+import online.jutter.smartsity.ui.auth.profile_filling.ProfileFillingFragment
 import online.jutter.smartsity.ui.global.FlowGlobalFragment
 import online.jutter.smartsity.ui.leaderboard.FlowLeaderboardFragment
 import online.jutter.smartsity.ui.leaderboard.LeaderboardFragment
@@ -26,6 +28,7 @@ import online.jutter.smartsity.ui.profile.FlowProfileFragment
 import online.jutter.smartsity.ui.profile.ProfileFragment
 import online.jutter.smartsity.ui.profile.findgroup.FindGroupFragment
 import online.jutter.smartsity.ui.profile.findgroup.createteam.CreateTeamFragment
+import online.jutter.smartsity.ui.profile.findgroup.jointeam.JoinTeamFragment
 import online.jutter.smartsity.ui.schedule.FlowScheduleFragment
 import online.jutter.smartsity.ui.schedule.ScheduleFragment
 import online.jutter.smartsity.ui.schedule.competitiondetail.CompetitionDetailFragment
@@ -48,6 +51,10 @@ object Screens {
     
     object Login : SupportAppScreen() {
         override fun getFragment() = LoginFragment()
+    }
+
+    object Registration : SupportAppScreen() {
+        override fun getFragment() = ProfileFillingFragment()
     }
 
     data class Pin(
@@ -150,5 +157,9 @@ object Screens {
 
     object CreateTeam: SupportAppScreen() {
         override fun getFragment() = CreateTeamFragment()
+    }
+
+    data class JoinTeam(val team: TeamLocal): SupportAppScreen() {
+        override fun getFragment() = JoinTeamFragment.create(team)
     }
 }

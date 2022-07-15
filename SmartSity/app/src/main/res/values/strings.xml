@@ -73,6 +73,8 @@
 
     <!-- Teams -->
     <string name="create_team">Создать команду</string>
+    <string name="join_team">Присоединится</string>
     <string name="search">Поиск</string>
     <string name="create_team_text">Вы можете создать свою команду, для участия в командных состязаниях.</string>
+    <string name="join_team_text">Для присоединения к команде необходимо ввести код</string>
 </resources>

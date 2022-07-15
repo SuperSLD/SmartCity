@@ -1,6 +1,12 @@
 package online.jutter.smartsity.data.net.retrofit
 
+import online.jutter.smartsity.data.net.models.CreateTeamBody
+import online.jutter.smartsity.data.net.models.JoinTeamBody
+import online.jutter.smartsity.data.net.models.RegistrationBody
+
 class ApiService(private val api: Api) {
+
+    suspend fun register(body: RegistrationBody) = api.fillUserData(body)
 
     suspend fun getScheduleList() = api.getSchedule()
 
@@ -18,6 +24,13 @@ class ApiService(private val api: Api) {
         phone: String,
         name: String,
         code: String,
-    ) = api.createTeam(phone, name, code)
+    ) = api.createTeam(CreateTeamBody(phone, name, code))
+
+    suspend fun joinTeam(
+        phone: String,
+        teamId: Long,
+        code: String
+    ) = api.joinTeam(JoinTeamBody(phone, teamId, code))
+
     suspend fun getStreams() = api.getStreams()
 }

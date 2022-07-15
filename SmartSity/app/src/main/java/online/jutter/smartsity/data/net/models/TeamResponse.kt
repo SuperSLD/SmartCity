@@ -3,7 +3,7 @@ package online.jutter.smartsity.data.net.models
 import online.jutter.smartsity.domain.models.TeamLocal
 
 data class TeamResponse(
-    val id: String,
+    val id: Long,
     val name: String,
     val password: String,
     val captainId: Long,

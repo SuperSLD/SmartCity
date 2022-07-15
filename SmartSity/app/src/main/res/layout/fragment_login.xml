@@ -50,18 +50,7 @@
                     android:textColor="@color/colorTextWhite"
                     android:text="@string/auth_login"
                     android:layout_marginHorizontal="16dp"
-            />
-
-            <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnRegister"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    style="@style/ButtonSolid"
-                    android:layout_marginTop="16dp"
-                    android:textColor="@color/colorTextWhite"
-                    android:text="@string/auth_go_to_reg"
-                    android:layout_marginHorizontal="16dp"
-                    android:layout_marginBottom="16dp"
+                android:layout_marginBottom="16dp"
             />
 
         </LinearLayout>
