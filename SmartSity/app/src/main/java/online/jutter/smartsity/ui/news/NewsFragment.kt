@@ -31,6 +31,10 @@ class NewsFragment: BaseFragment(R.layout.fragment_news), NewsView {
                 true
             )
         }
+
+        btnToStreams.setOnClickListener {
+            presenter.toStreams()
+        }
     }
     override fun onBackPressed() {
 

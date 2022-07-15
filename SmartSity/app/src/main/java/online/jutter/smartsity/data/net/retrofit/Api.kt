@@ -1,10 +1,6 @@
 package online.jutter.smartsity.data.net.retrofit
 
-import online.jutter.smartsity.data.net.models.DataWrapper
-import online.jutter.smartsity.data.net.models.NewsResponse
-import online.jutter.smartsity.data.net.models.LeaderboardResponse
-import online.jutter.smartsity.data.net.models.ProfileResponse
-import online.jutter.smartsity.data.net.models.ScheduleResponse
+import online.jutter.smartsity.data.net.models.*
 import retrofit2.http.GET
 import retrofit2.http.Path
 
@@ -22,9 +18,22 @@ interface Api {
     @GET("news/all")
     suspend fun getNews(): DataWrapper<List<NewsResponse>>
 
+    @GET("teams/all")
+    suspend fun getTeams(): DataWrapper<List<TeamResponse>>
+
     @GET("competitions/join/{phone}/{id}")
     suspend fun joinToCompetition(
         @Path("phone") phone: String,
         @Path("id") id: Int
     ): DataWrapper<Int>
+
+    @GET("teams/create/{phone}/{name}/{code}")
+    suspend fun createTeam(
+        @Path("phone") phone: String,
+        @Path("name") name: String,
+        @Path("code") code: String,
+    ): DataWrapper<Int>
+
+    @GET("streams/all")
+    suspend fun getStreams(): DataWrapper<List<StreamResponse>>
 }

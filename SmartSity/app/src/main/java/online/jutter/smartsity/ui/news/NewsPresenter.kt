@@ -23,25 +23,32 @@ class NewsPresenter: BasePresenter<NewsView>() {
     private val bottomVisibilityController: BottomVisibilityController by inject()
     private val getNewsUseCase: GetNewsUseCase by inject()
 
+    override fun attachView(view: NewsView?) {
+        super.attachView(view)
+
+        bottomVisibilityController.show()
+    }
+
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
 
-        bottomVisibilityController.show()
         loadList()
     }
 
     fun loadList() {
-        launchIO {
+        launchUI {
             viewState.toggleLoading(true)
-            val data = getNewsUseCase()
-            launchUI {
-                viewState.toggleLoading(false)
-                viewState.addList(data)
-            }
+            val data = withIO { getNewsUseCase() }
+            viewState.toggleLoading(false)
+            viewState.addList(data)
         }
     }
 
     fun toNewsDetail(news: NewsLocal) {
         router?.navigateTo(Screens.NewsDetail(news))
+    }
+
+    fun toStreams() {
+        router?.navigateTo(Screens.Streams)
     }
 }

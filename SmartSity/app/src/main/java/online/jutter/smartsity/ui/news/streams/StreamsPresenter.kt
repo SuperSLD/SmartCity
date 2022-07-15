@@ -1,42 +1,43 @@
-package online.jutter.smartsity.ui.profile
+package online.jutter.smartsity.ui.news.streams
 
 import com.arellomobile.mvp.InjectViewState
-import online.jutter.smartsity.Screens
+import com.arellomobile.mvp.presenter.InjectPresenter
 import online.jutter.smartsity.domain.controllers.BottomVisibilityController
-import online.jutter.smartsity.domain.usecases.GetProfileUseCase
+import online.jutter.smartsity.domain.usecases.GetStreamsUseCase
 import online.jutter.supersld.common.base.BasePresenter
 import online.jutter.supersld.extensions.launchIO
 import online.jutter.supersld.extensions.withUI
 import org.koin.core.inject
 
 @InjectViewState
-class ProfilePresenter: BasePresenter<ProfileView>() {
+class StreamsPresenter : BasePresenter<StreamsView>() {
 
-    private val getProfileUseCase: GetProfileUseCase by inject()
     private val bottomVisibilityController: BottomVisibilityController by inject()
+    private val getStreamsUseCase: GetStreamsUseCase by inject()
 
-    override fun attachView(view: ProfileView?) {
+    override fun attachView(view: StreamsView?) {
         super.attachView(view)
-        bottomVisibilityController.show()
+
+        bottomVisibilityController.hide()
     }
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
 
-        loadProfile()
+        loadStreams()
     }
 
-    fun onFindGroup() {
-        router?.navigateTo(Screens.FindGroup)
-    }
-
-    private fun loadProfile() {
+    fun loadStreams() {
         launchIO {
-            val data = getProfileUseCase()
+            val data = getStreamsUseCase()
             withUI {
-                viewState.showProfileData(data)
+                viewState.showStreams(data)
             }
         }
+    }
+
+    fun back() {
+        router?.exit()
     }
 
 }

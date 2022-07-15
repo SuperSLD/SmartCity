@@ -11,10 +11,15 @@ class NewsDetailPresenter(private val news: NewsLocal?) : BasePresenter<NewsDeta
 
     private val bottomVisibilityController: BottomVisibilityController by inject()
 
-    override fun onFirstViewAttach() {
-        super.onFirstViewAttach()
+    override fun attachView(view: NewsDetailsView?) {
+        super.attachView(view)
 
         bottomVisibilityController.hide()
+    }
+
+    override fun onFirstViewAttach() {
+        super.onFirstViewAttach()
+        
         loadData()
     }
 
