@@ -8,6 +8,9 @@ import retrofit2.http.Path
 
 interface Api {
 
+    @POST("users/register")
+    suspend fun fillUserData(@Body body: RegistrationBody): DataWrapper<Int>
+
     @GET("competitions/all")
     suspend fun getSchedule(): DataWrapper<HashMap<String, HashMap<String, MutableList<ScheduleResponse>>>>
 

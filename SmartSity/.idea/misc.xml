@@ -27,7 +27,7 @@
         <entry key="..\:/Projects/SmartCity/SmartSity/app/src/main/res/layout/fragment_createteam.xml" value="0.25052083333333336" />
         <entry key="..\:/Projects/SmartCity/SmartSity/app/src/main/res/layout/fragment_join_team.xml" value="0.264" />
         <entry key="..\:/Projects/SmartCity/SmartSity/app/src/main/res/layout/fragment_leadeboard.xml" value="0.25052083333333336" />
-        <entry key="..\:/Projects/SmartCity/SmartSity/app/src/main/res/layout/fragment_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projects/SmartCity/SmartSity/app/src/main/res/layout/fragment_login.xml" value="0.176" />
         <entry key="..\:/Projects/SmartCity/SmartSity/app/src/main/res/layout/fragment_main_container.xml" value="0.25052083333333336" />
         <entry key="..\:/Projects/SmartCity/SmartSity/app/src/main/res/layout/fragment_map.xml" value="0.25052083333333336" />
         <entry key="..\:/Projects/SmartCity/SmartSity/app/src/main/res/layout/fragment_navigation.xml" value="0.25052083333333336" />
@@ -35,6 +35,7 @@
         <entry key="..\:/Projects/SmartCity/SmartSity/app/src/main/res/layout/fragment_news_detail.xml" value="0.24947916666666667" />
         <entry key="..\:/Projects/SmartCity/SmartSity/app/src/main/res/layout/fragment_pin.xml" value="0.36666666666666664" />
         <entry key="..\:/Projects/SmartCity/SmartSity/app/src/main/res/layout/fragment_profile.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projects/SmartCity/SmartSity/app/src/main/res/layout/fragment_profile_filling.xml" value="0.24947916666666667" />
         <entry key="..\:/Projects/SmartCity/SmartSity/app/src/main/res/layout/fragment_schedule.xml" value="0.2" />
         <entry key="..\:/Projects/SmartCity/SmartSity/app/src/main/res/layout/fragment_selectroom.xml" value="0.25052083333333336" />
         <entry key="..\:/Projects/SmartCity/SmartSity/app/src/main/res/layout/fragment_splash.xml" value="0.36666666666666664" />

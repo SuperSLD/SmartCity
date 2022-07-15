@@ -9,6 +9,7 @@ import online.jutter.smartsity.data.net.models.MemberResponse
 import online.jutter.smartsity.domain.models.TeamLocal
 import online.jutter.smartsity.ui.auth.login.LoginFragment
 import online.jutter.smartsity.ui.auth.pincode.PinFragment
+import online.jutter.smartsity.ui.auth.profile_filling.ProfileFillingFragment
 import online.jutter.smartsity.ui.global.FlowGlobalFragment
 import online.jutter.smartsity.ui.leaderboard.FlowLeaderboardFragment
 import online.jutter.smartsity.ui.leaderboard.LeaderboardFragment
@@ -50,6 +51,10 @@ object Screens {
     
     object Login : SupportAppScreen() {
         override fun getFragment() = LoginFragment()
+    }
+
+    object Registration : SupportAppScreen() {
+        override fun getFragment() = ProfileFillingFragment()
     }
 
     data class Pin(
