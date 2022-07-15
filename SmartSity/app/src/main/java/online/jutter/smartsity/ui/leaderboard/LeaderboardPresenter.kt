@@ -35,11 +35,11 @@ class LeaderboardPresenter: BasePresenter<LeaderboardView>() {
     }
 
     fun loadSchedule() {
+        viewState.toggleLoading(true)
         launchIO {
             val data = getScheduleListUseCase()
-            withUI {
-                viewState.showLeaderBoard(data)
-            }
+            withUI { viewState.showLeaderBoard(data) }
+            viewState.toggleLoading(false)
         }
     }
 
