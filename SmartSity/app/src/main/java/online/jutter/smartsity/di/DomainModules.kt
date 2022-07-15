@@ -5,6 +5,9 @@ import online.jutter.smartsity.domain.usecases.GetPhoneUseCase
 import online.jutter.smartsity.domain.usecases.GetScheduleListUseCase
 import online.jutter.smartsity.domain.usecases.IsAuthUseCase
 import online.jutter.smartsity.domain.usecases.SavePhoneUseCase
+import online.jutter.smartsity.domain.controllers.BottomVisibilityController
+import online.jutter.smartsity.domain.controllers.ChangeBottomTabController
+import online.jutter.smartsity.domain.usecases.*
 import org.koin.core.module.Module
 
 fun Module.provideUseCases() {
@@ -12,6 +15,8 @@ fun Module.provideUseCases() {
     single { SavePhoneUseCase(get()) }
     single { IsAuthUseCase(get()) }
     single { GetScheduleListUseCase(get()) }
+    single { GetLeaderBoardUserCase(get()) }
+    single { GetProfileUseCase(get(), get()) }
 //    single { SaveHomeMarkerUseCase(get()) }
 }
 
