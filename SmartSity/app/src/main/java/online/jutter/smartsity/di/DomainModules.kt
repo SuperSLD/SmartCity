@@ -22,6 +22,7 @@ fun Module.provideUseCases() {
     single { GetStreamsUseCase(get()) }
     single { JoinToCompetitionUseCase(get(), get()) }
     single { CreateTeamUseCase(get(), get()) }
+    single { JoinTeamUseCase(get(), get()) }
 }
 
 fun Module.provideControllers() {

@@ -1,7 +1,9 @@
 package online.jutter.smartsity.data.net.retrofit
 
 import online.jutter.smartsity.data.net.models.*
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface Api {
@@ -27,11 +29,14 @@ interface Api {
         @Path("id") id: Int
     ): DataWrapper<Int>
 
-    @GET("teams/create/{phone}/{name}/{code}")
+    @POST("teams/create")
     suspend fun createTeam(
-        @Path("phone") phone: String,
-        @Path("name") name: String,
-        @Path("code") code: String,
+        @Body body: CreateTeamBody
+    ): DataWrapper<Int>
+
+    @POST("teams/join")
+    suspend fun joinTeam(
+        @Body body: JoinTeamBody
     ): DataWrapper<Int>
 
     @GET("streams/all")

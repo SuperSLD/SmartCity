@@ -18,11 +18,6 @@ class ProfilePresenter: BasePresenter<ProfileView>() {
     override fun attachView(view: ProfileView?) {
         super.attachView(view)
         bottomVisibilityController.show()
-    }
-
-    override fun onFirstViewAttach() {
-        super.onFirstViewAttach()
-
         loadProfile()
     }
 
