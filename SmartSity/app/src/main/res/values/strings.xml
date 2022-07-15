@@ -37,4 +37,13 @@
     <string name="profile_team_captain">Капитан</string>
     <string name="profile_team_join">Вступить в команду</string>
     <string name="profile_results">Мои результаты</string>
+
+    <!-- Map -->
+    <string name="map_loading">Загрузка карты</string>
+    <string name="roadmap_nav_title">Маршрут построен</string>
+    <string name="roadmap_nav_dist">Расстояние:</string>
+    <string name="roadmap_nav_time">Время:</string>
+    <string name="roadmap_nav_km">%1$s км</string>
+    <string name="roadmap_nav_min">%1$s мин</string>
+    <string name="roadmap_nav_error">Не удалось построить маршрут</string>
 </resources>
