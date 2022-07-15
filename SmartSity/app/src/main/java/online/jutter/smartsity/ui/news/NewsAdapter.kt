@@ -1,32 +1,57 @@
 package online.jutter.smartsity.ui.news
 
 import android.nfc.tech.MifareUltralight.PAGE_SIZE
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import online.jutter.diffadapter2.DiffAdapter
 import online.jutter.diffadapter2.base.HolderFactory
+import online.jutter.smartsity.databinding.ItemEventHolderBinding
 import online.jutter.smartsity.domain.controllers.models.Event
-import online.jutter.smartsity.ui.news.holders.EventHolder
+import online.jutter.smartsity.domain.models.NewsLocal
 import online.jutter.supersld.extensions.launchUI
 import online.jutter.supersld.extensions.withIO
 
-class NewsAdapter : DiffAdapter() {
+class NewsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    companion object {
-        const val LIVE_RECORD_ITEM = 1001
-        const val TITLE_ITEM = 1002
-        const val EVENT_ITEM = 1003
+    val news = mutableListOf<NewsLocal>()
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        return NewsHolder(
+            ItemEventHolderBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
-    override fun initFactory() = HolderFactory(hashMapOf(
-        EVENT_ITEM to EventHolder::class.java
-    ))
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        (holder as NewsHolder).bind(news[position])
+    }
 
-    fun addData(data: MutableList<Event>) {
-        data.forEach { adv ->
-            val list = getList()
-            list.add(Pair(LIVE_RECORD_ITEM, adv))
-            list.add(Pair(TITLE_ITEM, adv))
-            list.add(Pair(EVENT_ITEM, adv))
-        }
+    override fun getItemCount(): Int = news.size
+
+    fun addAll(newItems: List<NewsLocal>) {
+        news.clear()
+        news.addAll(newItems)
         notifyDataSetChanged()
     }
+
+    inner class NewsHolder(private val binding: ItemEventHolderBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(data: NewsLocal) {
+            with(binding) {
+                tvTitle.text = data.title
+                tvInfo.text = data.shortText
+                tvDate.text = data.dateString
+
+                Glide
+                    .with(itemView.context)
+                    .load(data.image)
+                    .into(ivEvent)
+            }
+        }
+    }
+
 }

@@ -1,13 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvNews"
+    <LinearLayout
+        android:id="@+id/vgContent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="28dp"
         android:clipToPadding="false"
-        android:paddingTop="32dp"/>
+        android:clipChildren="false">
 
-</LinearLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnToCompetitionsNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/elevation"
+            app:cardBackgroundColor="@color/colorBackgroundSecondary"
+            app:strokeColor="@color/colorBorder"
+            app:strokeWidth="1dp"
+            app:cardCornerRadius="@dimen/radius"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/ic_news_item">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:foreground="?android:selectableItemBackground"
+                android:gravity="center_vertical">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_news_item"
+                    android:layout_gravity="end"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="18dp">
+
+                    <TextView
+                        android:id="@+id/tvCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Саратов"
+                        android:textColor="@color/colorTextSecondary"
+                        android:textSize="@dimen/textNormal"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="13dp"
+                        android:text="@string/news_title"
+                        android:singleLine="false"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/textTitle"
+                        android:layout_marginBottom="20dp"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnToStreams"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/elevation"
+            app:cardBackgroundColor="@color/colorBackgroundSecondary"
+            app:strokeColor="@color/colorBorder"
+            app:strokeWidth="1dp"
+            app:cardCornerRadius="@dimen/radius"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/ic_news_item">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:foreground="?android:selectableItemBackground"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_life"
+                    android:layout_gravity="end"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="13dp"
+                        android:text="@string/live_record_title"
+                        android:singleLine="false"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/textTitle"
+                        android:layout_marginBottom="20dp"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_event_holder"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
