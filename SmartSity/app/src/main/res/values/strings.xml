@@ -42,4 +42,19 @@
     <string name="roadmap_nav_km">%1$s км</string>
     <string name="roadmap_nav_min">%1$s мин</string>
     <string name="roadmap_nav_error">Не удалось построить маршрут</string>
+    <string name="select_point_back">Назад</string>
+
+    <!-- Navigation -->
+    <string name="nav_title">Поиск маршрута</string>
+    <string name="nav_a_title">Начало пути</string>
+    <string name="nav_a_desk">Выберите начало маршрута</string>
+    <string name="nav_b_title">Пункт назначения</string>
+    <string name="nav_b_desk">Выберите пункт назначения</string>
+    <string name="nav_r_title">Помещение</string>
+    <string name="nav_r_desk">Укажите место в здании</string>
+    <string name="nav_desk">Поиск самой удобной дороги, до пункта назначения, с учетом качества дорог.</string>
+    <string name="marker_info_done">Выбрано</string>
+    <string name="select_point_done">Готово</string>
+    <string name="roadmap_nav">Маршрут</string>
+
 </resources>

@@ -6,13 +6,14 @@ import android.view.View
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.arellomobile.mvp.presenter.InjectPresenter
 import kotlinx.android.synthetic.main.fragment_map.*
+import online.jutter.roadmapview.data.models.map.RMMarker
 import online.jutter.smartsity.R
 import online.jutter.smartsity.common.extesions.hide
 import online.jutter.smartsity.common.extesions.round
 import online.jutter.smartsity.common.extesions.show
 import online.jutter.smartsity.databinding.FragmentMapBinding
 import online.jutter.supersld.common.base.BaseFragment
-import online.jutter.supersld.extensions.addSystemTopAndBottomPadding
+import online.jutter.supersld.extensions.addSystemTopPadding
 
 class MapFragment: BaseFragment(R.layout.fragment_map), MapView {
 
@@ -24,11 +25,12 @@ class MapFragment: BaseFragment(R.layout.fragment_map), MapView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        mapMenuContainer.addSystemTopAndBottomPadding()
+        mapMenuContainer.addSystemTopPadding()
 
         showMapLoading(true)
         showNavData(false)
         initMapView()
+        btnNav.setOnClickListener { presenter.onOpenNavigation() }
     }
 
     private fun initMapView() {
@@ -105,5 +107,10 @@ class MapFragment: BaseFragment(R.layout.fragment_map), MapView {
 
     override fun onBackPressed() {
         presenter.back()
+    }
+
+    override fun findRoad(markers: Pair<RMMarker, RMMarker>) {
+        mapView.findRoad(markers.first, markers.second)
+        showNavData(true)
     }
 }

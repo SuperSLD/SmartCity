@@ -1,7 +1,6 @@
 package online.jutter.smartsity.di
 
-import online.jutter.smartsity.domain.controllers.BottomVisibilityController
-import online.jutter.smartsity.domain.controllers.ChangeBottomTabController
+import online.jutter.smartsity.domain.controllers.*
 import online.jutter.smartsity.domain.usecases.GetPhoneUseCase
 import online.jutter.smartsity.domain.usecases.GetScheduleListUseCase
 import online.jutter.smartsity.domain.usecases.IsAuthUseCase
@@ -19,5 +18,7 @@ fun Module.provideUseCases() {
 fun Module.provideControllers() {
     single { ChangeBottomTabController() }
     single { BottomVisibilityController() }
-//    single { SelectRoomController() }
+    single { SelectMarkerController() }
+    single { NavigationController() }
+    single { SelectRoomController() }
 }
