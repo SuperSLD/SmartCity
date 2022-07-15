@@ -19,6 +19,7 @@ import online.jutter.smartsity.ui.news.NewsFragment
 import online.jutter.smartsity.ui.news.detail.NewsDetailFragment
 import online.jutter.smartsity.ui.profile.FlowProfileFragment
 import online.jutter.smartsity.ui.profile.ProfileFragment
+import online.jutter.smartsity.ui.profile.findgroup.FindGroupFragment
 import online.jutter.smartsity.ui.schedule.FlowScheduleFragment
 import online.jutter.smartsity.ui.schedule.ScheduleFragment
 import online.jutter.smartsity.ui.schedule.competitiondetail.CompetitionDetailFragment
@@ -126,5 +127,9 @@ object Screens {
 
     object Profile: SupportAppScreen() {
         override fun getFragment(): Fragment = ProfileFragment()
+    }
+
+    object FindGroup: SupportAppScreen() {
+        override fun getFragment() = FindGroupFragment()
     }
 }

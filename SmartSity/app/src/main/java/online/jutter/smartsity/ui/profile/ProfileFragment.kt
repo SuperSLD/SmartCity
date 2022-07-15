@@ -7,6 +7,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import kotlinx.android.synthetic.main.fragment_profile.*
 import online.jutter.smartsity.R
 import online.jutter.smartsity.databinding.FragmentProfileBinding
 import online.jutter.smartsity.domain.models.ProfileLocal
@@ -61,7 +62,7 @@ class ProfileFragment: BaseFragment(R.layout.fragment_profile), ProfileView{
         with (binding) {
             tvName.text = data.user.firstname + " " + data.user.lastname
             tvCity.text = data.user.city
-            tvTeamName.text = data.team.name
+            tvTeamName.text = data.team?.name?:"Вы можете найти команду"
 
             Glide
                 .with(requireContext())
@@ -70,13 +71,19 @@ class ProfileFragment: BaseFragment(R.layout.fragment_profile), ProfileView{
                 .into(ivAvatar)
         }
 
-        teamAdapter.addAll(data.team.participants, data.team.captainId)
-        resultsAdapter.addAll(
-            data.goldMedalsCount,
-            data.silverMedalsCount,
-            data.bronzeMedalsCount,
-            data.otherMedalsCount
-        )
+        if (data.team != null) {
+            teamAdapter.addAll(data.team.participants, data.team.captainId)
+            resultsAdapter.addAll(
+                data.goldMedalsCount,
+                data.silverMedalsCount,
+                data.bronzeMedalsCount,
+                data.otherMedalsCount
+            )
+        } else {
+            btnGroup.setOnClickListener {
+                presenter.onFindGroup()
+            }
+        }
     }
 
     override fun onBackPressed() {

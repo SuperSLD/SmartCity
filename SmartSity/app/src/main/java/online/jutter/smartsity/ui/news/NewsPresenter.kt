@@ -31,13 +31,11 @@ class NewsPresenter: BasePresenter<NewsView>() {
     }
 
     fun loadList() {
-        launchIO {
+        launchUI {
             viewState.toggleLoading(true)
-            val data = getNewsUseCase()
-            launchUI {
-                viewState.toggleLoading(false)
-                viewState.addList(data)
-            }
+            val data = withIO { getNewsUseCase() }
+            viewState.toggleLoading(false)
+            viewState.addList(data)
         }
     }
 

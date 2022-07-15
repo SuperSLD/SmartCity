@@ -70,4 +70,7 @@
     <string name="success_description">Вы успешно зарегестрировались, все свои записи вы можете посмотреть в ваших результатах.</string>
     <string name="success_button">Отлично</string>
 
+    <!-- Teams -->
+    <string name="create_team">Создать команду</string>
+    <string name="search">Поиск</string>
 </resources>
