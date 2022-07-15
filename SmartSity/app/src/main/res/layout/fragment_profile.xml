@@ -33,9 +33,18 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/ivAvatar"
                     android:layout_width="111dp"
                     android:layout_height="111dp"
+                    app:layout_constraintTop_toTopOf="@id/ivAvatar"
+                    app:layout_constraintBottom_toBottomOf="@id/ivAvatar"
+                    app:layout_constraintStart_toStartOf="@id/ivAvatar"
+                    app:layout_constraintEnd_toEndOf="@id/ivAvatar"
+                    android:src="@drawable/bg_medal"/>
+
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
                     android:layout_marginBottom="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -55,6 +64,7 @@
                     tools:text="Юра Воронцов" />
 
                 <TextView
+                    android:id="@+id/tvCity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
@@ -72,57 +82,58 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             app:cardCornerRadius="16dp"
-            app:cardElevation="8dp"
-            android:layout_marginBottom="16dp">
+            app:cardElevation="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="20dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="20dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
                     android:text="@string/profile_team_title"
-                    android:textSize="18sp"
                     android:textColor="@color/colorTextPrimary"
+                    android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginBottom="14dp"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/colorBackgroundGray"
                     android:layout_marginBottom="14dp"
-                    />
+                    android:background="@color/colorBackgroundGray" />
 
                 <TextView
                     android:id="@+id/tvTeamName"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginBottom="11dp"
                     android:fontFamily="@font/roboto_bold"
                     android:textColor="@color/colorTextPrimary"
                     android:textSize="20sp"
-                    tools:text="Jutter"
-                    android:layout_marginBottom="11dp"/>
+                    tools:text="Jutter" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvTeam"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:listitem="@layout/item_team"
-                    tools:itemCount="4"/>
+                    android:nestedScrollingEnabled="false"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_team" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnJoinTeam"
                     style="@style/ButtonSolid"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
                     android:text="@string/profile_team_join"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
 
             </LinearLayout>
 
@@ -143,17 +154,17 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
+                    android:text="@string/profile_results"
                     android:textColor="@color/colorTextPrimary"
-                    android:text="@string/profile_results"/>
+                    android:textSize="18sp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvResults"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    tools:listitem="@layout/item_results"
-                    tools:itemCount="4"/>
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_results" />
 
             </LinearLayout>
 
