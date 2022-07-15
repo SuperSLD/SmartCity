@@ -22,6 +22,7 @@ import online.jutter.smartsity.ui.profile.ProfileFragment
 import online.jutter.smartsity.ui.schedule.FlowScheduleFragment
 import online.jutter.smartsity.ui.schedule.ScheduleFragment
 import online.jutter.smartsity.ui.schedule.competitiondetail.CompetitionDetailFragment
+import online.jutter.smartsity.ui.schedule.successjoin.SuccessFragment
 import online.jutter.smartsity.ui.splash.SplashFragment
 import ru.terrakok.cicerone.android.support.SupportAppScreen
 
@@ -83,6 +84,10 @@ object Screens {
         val scheduleLocal: ScheduleLocal
     ): SupportAppScreen() {
         override fun getFragment() = CompetitionDetailFragment.createInstance(scheduleLocal)
+    }
+
+    object Success: SupportAppScreen() {
+        override fun getFragment() = SuccessFragment()
     }
 
     /** Карта - роутер */

@@ -4,6 +4,7 @@ import android.graphics.Color
 import com.arellomobile.mvp.InjectViewState
 import online.jutter.roadmapview.data.models.map.RMMarker
 import online.jutter.smartsity.Screens
+import online.jutter.smartsity.domain.controllers.BottomVisibilityController
 import online.jutter.smartsity.domain.controllers.NavigationController
 import online.jutter.smartsity.domain.controllers.SelectMarkerController
 import online.jutter.smartsity.domain.controllers.SelectRoomController
@@ -13,10 +14,16 @@ import org.koin.core.inject
 @InjectViewState
 class NavigationPresenter : BasePresenter<NavigationView>() {
 
+    private val bottomVisibilityController: BottomVisibilityController by inject()
     private val selectMarkerController: SelectMarkerController by inject()
     private val selectRoomController: SelectRoomController by inject()
     private val navigationController: NavigationController by inject()
     private var isStartMarker = false
+
+    override fun attachView(view: NavigationView?) {
+        super.attachView(view)
+        bottomVisibilityController.hide()
+    }
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
