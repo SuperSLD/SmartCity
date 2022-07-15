@@ -18,6 +18,7 @@ fun Module.provideUseCases() {
     single { GetLeaderBoardUserCase(get()) }
     single { GetProfileUseCase(get(), get()) }
     single { GetNewsUseCase(get()) }
+    single { GetStreamsUseCase(get()) }
     single { JoinToCompetitionUseCase(get(), get()) }
 }
 
