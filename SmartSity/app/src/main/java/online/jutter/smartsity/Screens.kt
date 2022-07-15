@@ -11,6 +11,8 @@ import online.jutter.smartsity.ui.main.FlowMainFragment
 import online.jutter.smartsity.ui.main.MainContainerFragment
 import online.jutter.smartsity.ui.map.FlowMapFragment
 import online.jutter.smartsity.ui.map.MapFragment
+import online.jutter.smartsity.ui.map.navigation.NavigationFragment
+import online.jutter.smartsity.ui.map.selectroom.SelectRoomFragment
 import online.jutter.smartsity.ui.news.FlowNewsFragment
 import online.jutter.smartsity.ui.news.NewsFragment
 import online.jutter.smartsity.ui.news.detail.NewsDetailFragment
@@ -83,6 +85,14 @@ object Screens {
 
     object Map: SupportAppScreen() {
         override fun getFragment(): Fragment = MapFragment()
+    }
+
+    object Navigation : SupportAppScreen() {
+        override fun getFragment() = NavigationFragment()
+    }
+
+    object SelectRoom : SupportAppScreen() {
+        override fun getFragment() = SelectRoomFragment()
     }
 
     /** Победители - роутер */

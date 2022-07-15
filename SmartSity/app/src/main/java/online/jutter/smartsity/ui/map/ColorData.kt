@@ -16,7 +16,7 @@ fun Context.getMapColorData(
         RMColorData(
             backColor = back,
             roadColors = listOf(
-                createColor(60, 60, 60), // серый
+                createColor(225, 225, 225), // серый
                 createColor(47, 131, 207), // красный
                 createColor(47, 131, 207),  // желтый
                 createColor(47, 131, 207), // зеленый
