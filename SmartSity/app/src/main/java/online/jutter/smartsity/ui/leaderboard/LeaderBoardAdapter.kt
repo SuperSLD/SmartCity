@@ -8,9 +8,11 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_leaderboard_holder.view.*
 import online.jutter.smartsity.R
 import online.jutter.smartsity.data.net.models.LeaderboardResponse
+import online.jutter.smartsity.data.net.models.MemberResponse
 import online.jutter.smartsity.domain.models.schedule.ScheduleDateLocal
 
 class LeaderBoardAdapter(
+    private val onLeaderBoardClick: (MutableList<MemberResponse>) -> Unit,
     private val leaderBoardList: MutableList<LeaderboardResponse> = mutableListOf()
 
  ): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -50,7 +52,8 @@ class LeaderBoardAdapter(
                     thirdPlaceLayout.visibility = View.GONE
                 } else tvThirdPlaceName.text = item.list[2].name
 
-
+                setOnClickListener{
+                    onLeaderBoardClick(item.list.toMutableList())}
             }
         }
 
