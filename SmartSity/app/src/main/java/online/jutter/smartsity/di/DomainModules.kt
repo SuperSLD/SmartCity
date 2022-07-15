@@ -10,6 +10,7 @@ fun Module.provideUseCases() {
     single { SavePhoneUseCase(get()) }
     single { IsAuthUseCase(get()) }
     single { GetScheduleListUseCase(get()) }
+    single { GetLeaderBoardUserCase(get()) }
     single { GetProfileUseCase(get(), get()) }
 //    single { SaveHomeMarkerUseCase(get()) }
 }

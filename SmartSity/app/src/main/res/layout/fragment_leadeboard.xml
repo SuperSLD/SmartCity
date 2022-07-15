@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/textTitle"
@@ -19,7 +20,6 @@
         android:id="@+id/rvLeaderBoard"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:paddingTop="32dp" />
+        android:clipToPadding="false" />
 
 </LinearLayout>
