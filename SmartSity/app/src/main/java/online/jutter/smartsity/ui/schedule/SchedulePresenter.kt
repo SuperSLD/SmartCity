@@ -21,8 +21,10 @@ class SchedulePresenter: BasePresenter<ScheduleView>() {
 
     fun loadSchedule() {
         launchIO {
+            viewState.toggleLoading(true)
             val data = getScheduleListUseCase()
             withUI {
+                viewState.toggleLoading(false)
                 viewState.showSchedule(data)
             }
         }
