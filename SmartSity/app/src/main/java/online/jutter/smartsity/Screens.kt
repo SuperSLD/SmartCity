@@ -17,6 +17,7 @@ import online.jutter.smartsity.ui.map.selectroom.SelectRoomFragment
 import online.jutter.smartsity.ui.news.FlowNewsFragment
 import online.jutter.smartsity.ui.news.NewsFragment
 import online.jutter.smartsity.ui.news.detail.NewsDetailFragment
+import online.jutter.smartsity.ui.news.streams.StreamsFragment
 import online.jutter.smartsity.ui.profile.FlowProfileFragment
 import online.jutter.smartsity.ui.profile.ProfileFragment
 import online.jutter.smartsity.ui.schedule.FlowScheduleFragment
@@ -67,6 +68,10 @@ object Screens {
 
     data class NewsDetail(val news: NewsLocal) : SupportAppScreen() {
         override fun getFragment(): Fragment = NewsDetailFragment.create(news)
+    }
+
+    object Streams : SupportAppScreen() {
+        override fun getFragment(): Fragment = StreamsFragment()
     }
 
     /** Расписание - роутер */

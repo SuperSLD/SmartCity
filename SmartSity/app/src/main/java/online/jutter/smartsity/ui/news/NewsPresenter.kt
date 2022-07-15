@@ -49,4 +49,8 @@ class NewsPresenter: BasePresenter<NewsView>() {
     fun toNewsDetail(news: NewsLocal) {
         router?.navigateTo(Screens.NewsDetail(news))
     }
+
+    fun toStreams() {
+        router?.navigateTo(Screens.Streams)
+    }
 }

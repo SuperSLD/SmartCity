@@ -11,4 +11,6 @@ class ApiService(private val api: Api) {
     suspend fun getNews() = api.getNews()
 
     suspend fun joinToCompetition(phone: String, id: Int) = api.joinToCompetition(phone, id)
+
+    suspend fun getStreams() = api.getStreams()
 }
