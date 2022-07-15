@@ -93,6 +93,7 @@
 
                 <TextView
                     android:id="@+id/tvFirstPlaceTime"
+                    android:visibility="invisible"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -125,6 +126,7 @@
                     android:layout_weight="1"/>
 
                 <TextView
+                    android:visibility="invisible"
                     android:id="@+id/tvSecondPlaceTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -158,6 +160,7 @@
                     android:layout_weight="1"/>
 
                 <TextView
+                    android:visibility="invisible"
                     android:id="@+id/tvThirdPlaceTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

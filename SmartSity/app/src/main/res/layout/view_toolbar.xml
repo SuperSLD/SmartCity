@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:mask="http://schemas.android.com/tools"
+
         android:orientation="horizontal"
         android:gravity="center_vertical"
->
-    <ImageButton
+        >
+        <ImageButton
             android:id="@+id/icClose"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -15,7 +20,7 @@
             app:srcCompat="@drawable/ic_arrow_left"
             android:visibility="invisible"
             app:tint="@color/colorPrimary"/>
-    <TextView
+        <TextView
             android:id="@+id/tvTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -24,8 +29,8 @@
             android:textSize="20sp"
             android:text="Title"
             android:layout_weight="1"
-    />
-    <TextView
+            />
+        <TextView
             android:id="@+id/tvAction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,8 +41,8 @@
             android:textColor="@color/colorTextSecondary"
             android:fontFamily="@font/roboto_bold"
             android:visibility="gone"
-    />
-    <ImageButton
+            />
+        <ImageButton
             android:id="@+id/icFirst"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -45,7 +50,7 @@
             app:srcCompat="@drawable/ic_arrow_left"
             android:visibility="gone"
             app:tint="@color/colorPrimary"/>
-    <ImageButton
+        <ImageButton
             android:id="@+id/icSecond"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -53,4 +58,12 @@
             app:srcCompat="@drawable/ic_arrow_left"
             android:visibility="gone"
             app:tint="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6EBF0"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"/>
 </LinearLayout>
