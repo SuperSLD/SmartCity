@@ -5,6 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.arellomobile.mvp.presenter.InjectPresenter
 import kotlinx.android.synthetic.main.fragment_leadeboard.*
+import kotlinx.android.synthetic.main.view_loading.*
 import online.jutter.smartsity.R
 import online.jutter.smartsity.data.net.models.LeaderboardResponse
 import online.jutter.supersld.common.base.BaseFragment
@@ -40,4 +41,12 @@ class LeaderboardFragment: BaseFragment(R.layout.fragment_leadeboard), Leaderboa
     override fun showLeaderBoard(data: List<LeaderboardResponse>) {
         adapter.addAll(data)
     }
+
+    override fun showErrorLoading() {
+
+    }
+
+    override fun toggleLoading(show: Boolean) {
+        loading.visibility = if (show) View.VISIBLE else View.GONE
+        rvLeaderBoard.visibility = if (show) View.GONE else View.VISIBLE    }
 }

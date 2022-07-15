@@ -1,6 +1,8 @@
 package online.jutter.smartsity.ui.leaderboard.info
 
 import android.content.Context
+import online.jutter.smartsity.data.net.models.LeaderboardResponse
+import online.jutter.smartsity.data.net.models.MemberResponse
 import online.jutter.smartsity.domain.controllers.BottomVisibilityController
 import online.jutter.supersld.common.base.BasePresenter
 import org.koin.core.inject

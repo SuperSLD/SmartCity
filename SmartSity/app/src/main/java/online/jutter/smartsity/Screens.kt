@@ -1,6 +1,8 @@
 package online.jutter.smartsity
 
 import androidx.fragment.app.Fragment
+import online.jutter.smartsity.data.net.models.CompetitionResponse
+import online.jutter.smartsity.data.net.models.LeaderboardResponse
 import online.jutter.smartsity.domain.models.NewsLocal
 import online.jutter.smartsity.domain.models.schedule.ScheduleLocal
 import online.jutter.smartsity.data.net.models.MemberResponse
@@ -128,8 +130,8 @@ object Screens {
         override fun getFragment(): Fragment = LeaderboardFragment()
     }
 
-    data class LeaderboardInfo(val members: MutableList<MemberResponse>) : SupportAppScreen() {
-        override fun getFragment() = LeaderboardInfoFragment.create(members)
+    data class LeaderboardInfo(val leaderboard: LeaderboardResponse) : SupportAppScreen() {
+        override fun getFragment() = LeaderboardInfoFragment.createInstance(leaderboard)
     }
 
     /** Профиль - роутер */
