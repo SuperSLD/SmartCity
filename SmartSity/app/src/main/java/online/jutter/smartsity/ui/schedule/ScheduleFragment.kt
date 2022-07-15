@@ -13,6 +13,7 @@ import online.jutter.smartsity.ui.ext.dpToPx
 import online.jutter.smartsity.ui.schedule.adapters.ScheduleDateAdapter
 import online.jutter.supersld.common.base.BaseFragment
 import online.jutter.supersld.extensions.addSystemTopPadding
+import org.koin.android.ext.android.bind
 
 class ScheduleFragment: BaseFragment(R.layout.fragment_schedule), ScheduleView {
 
@@ -27,11 +28,12 @@ class ScheduleFragment: BaseFragment(R.layout.fragment_schedule), ScheduleView {
         super.onViewCreated(view, savedInstanceState)
 
         initUi()
+        initListeners()
     }
 
     private fun initUi() {
         with(binding) {
-            vgContent.addSystemTopPadding()
+            root.addSystemTopPadding()
             rvSchedule.run {
                 adapter = this@ScheduleFragment.adapter
                 layoutManager = LinearLayoutManager(
@@ -44,11 +46,23 @@ class ScheduleFragment: BaseFragment(R.layout.fragment_schedule), ScheduleView {
         }
     }
 
+    private fun initListeners() {
+        with(binding) {
+            srl.setOnRefreshListener {
+                presenter.loadSchedule()
+            }
+        }
+    }
+
     override fun showSchedule(data: List<ScheduleDateLocal>) {
         adapter.addAll(data)
     }
 
-    override fun onBackPressed() {
+    override fun showErrorLoading() {}
 
+    override fun onBackPressed() {}
+
+    override fun toggleLoading(show: Boolean) {
+        binding.srl.isRefreshing = show
     }
 }
