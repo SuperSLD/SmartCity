@@ -13,7 +13,6 @@ import online.jutter.smartsity.ui.ext.dpToPx
 import online.jutter.smartsity.ui.schedule.adapters.ScheduleDateAdapter
 import online.jutter.supersld.common.base.BaseFragment
 import online.jutter.supersld.extensions.addSystemTopPadding
-import org.koin.android.ext.android.bind
 
 class ScheduleFragment: BaseFragment(R.layout.fragment_schedule), ScheduleView {
 
@@ -22,7 +21,7 @@ class ScheduleFragment: BaseFragment(R.layout.fragment_schedule), ScheduleView {
 
     private val binding: FragmentScheduleBinding by viewBinding()
 
-    private val adapter by lazy { ScheduleDateAdapter() }
+    private val adapter by lazy { ScheduleDateAdapter(presenter::onCompetitionClick) }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
