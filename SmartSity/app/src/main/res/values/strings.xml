@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SmartSity</string>
+    <string name="app_name">Умный Город</string>
 
     <!-- Navigation -->
     <string name="news_navigation">Новости</string>
@@ -64,5 +64,10 @@
     <string name="marker_info_done">Выбрано</string>
     <string name="select_point_done">Готово</string>
     <string name="roadmap_nav">Маршрут</string>
+
+    <!-- Competition -->
+    <string name="join">Записаться</string>
+    <string name="success_description">Вы успешно зарегестрировались, все свои записи вы можете посмотреть в ваших результатах.</string>
+    <string name="success_button">Отлично</string>
 
 </resources>

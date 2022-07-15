@@ -21,4 +21,10 @@ interface Api {
 
     @GET("news/all")
     suspend fun getNews(): DataWrapper<List<NewsResponse>>
+
+    @GET("competitions/join/{phone}/{id}")
+    suspend fun joinToCompetition(
+        @Path("phone") phone: String,
+        @Path("id") id: Int
+    ): DataWrapper<Int>
 }

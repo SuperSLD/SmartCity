@@ -4,8 +4,11 @@ import android.content.Context
 import android.nfc.tech.MifareUltralight.PAGE_SIZE
 import com.arellomobile.mvp.InjectViewState
 import online.jutter.smartsity.R
+import online.jutter.smartsity.Screens
 import online.jutter.smartsity.common.extesions.showToast
+import online.jutter.smartsity.domain.controllers.BottomVisibilityController
 import online.jutter.smartsity.domain.controllers.models.Event
+import online.jutter.smartsity.domain.models.NewsLocal
 import online.jutter.smartsity.domain.usecases.GetNewsUseCase
 import online.jutter.smartsity.ui.ext.createHandler
 import online.jutter.supersld.common.base.BasePresenter
@@ -17,10 +20,13 @@ import org.koin.core.inject
 @InjectViewState
 class NewsPresenter: BasePresenter<NewsView>() {
 
+    private val bottomVisibilityController: BottomVisibilityController by inject()
     private val getNewsUseCase: GetNewsUseCase by inject()
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
+
+        bottomVisibilityController.show()
         loadList()
     }
 
@@ -33,5 +39,9 @@ class NewsPresenter: BasePresenter<NewsView>() {
                 viewState.addList(data)
             }
         }
+    }
+
+    fun toNewsDetail(news: NewsLocal) {
+        router?.navigateTo(Screens.NewsDetail(news))
     }
 }

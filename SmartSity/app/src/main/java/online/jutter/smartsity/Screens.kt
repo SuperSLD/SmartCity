@@ -1,6 +1,8 @@
 package online.jutter.smartsity
 
 import androidx.fragment.app.Fragment
+import online.jutter.smartsity.domain.models.NewsLocal
+import online.jutter.smartsity.domain.models.schedule.ScheduleLocal
 import online.jutter.smartsity.data.net.models.MemberResponse
 import online.jutter.smartsity.ui.auth.login.LoginFragment
 import online.jutter.smartsity.ui.auth.pincode.PinFragment
@@ -16,10 +18,13 @@ import online.jutter.smartsity.ui.map.navigation.NavigationFragment
 import online.jutter.smartsity.ui.map.selectroom.SelectRoomFragment
 import online.jutter.smartsity.ui.news.FlowNewsFragment
 import online.jutter.smartsity.ui.news.NewsFragment
+import online.jutter.smartsity.ui.news.detail.NewsDetailFragment
 import online.jutter.smartsity.ui.profile.FlowProfileFragment
 import online.jutter.smartsity.ui.profile.ProfileFragment
 import online.jutter.smartsity.ui.schedule.FlowScheduleFragment
 import online.jutter.smartsity.ui.schedule.ScheduleFragment
+import online.jutter.smartsity.ui.schedule.competitiondetail.CompetitionDetailFragment
+import online.jutter.smartsity.ui.schedule.successjoin.SuccessFragment
 import online.jutter.smartsity.ui.splash.SplashFragment
 import ru.terrakok.cicerone.android.support.SupportAppScreen
 import java.lang.reflect.Member
@@ -64,6 +69,10 @@ object Screens {
         override fun getFragment(): Fragment = NewsFragment()
     }
 
+    data class NewsDetail(val news: NewsLocal) : SupportAppScreen() {
+        override fun getFragment(): Fragment = NewsDetailFragment.create(news)
+    }
+
     /** Расписание - роутер */
 
     object FlowSchedule: SupportAppScreen() {
@@ -72,6 +81,16 @@ object Screens {
 
     object Schedule: SupportAppScreen() {
         override fun getFragment(): Fragment = ScheduleFragment()
+    }
+
+    data class CompetitionDetail(
+        val scheduleLocal: ScheduleLocal
+    ): SupportAppScreen() {
+        override fun getFragment() = CompetitionDetailFragment.createInstance(scheduleLocal)
+    }
+
+    object Success: SupportAppScreen() {
+        override fun getFragment() = SuccessFragment()
     }
 
     /** Карта - роутер */

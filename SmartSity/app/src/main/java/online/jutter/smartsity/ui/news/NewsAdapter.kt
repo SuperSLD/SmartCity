@@ -13,7 +13,8 @@ import online.jutter.smartsity.domain.models.NewsLocal
 import online.jutter.supersld.extensions.launchUI
 import online.jutter.supersld.extensions.withIO
 
-class NewsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class NewsAdapter(private val onNewsClick: (news: NewsLocal) -> Unit)
+    : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     val news = mutableListOf<NewsLocal>()
 
@@ -50,6 +51,10 @@ class NewsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     .with(itemView.context)
                     .load(data.image)
                     .into(ivEvent)
+
+                root.setOnClickListener {
+                    onNewsClick(data)
+                }
             }
         }
     }
