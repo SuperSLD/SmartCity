@@ -19,4 +19,5 @@ class ApiService(private val api: Api) {
         name: String,
         code: String,
     ) = api.createTeam(phone, name, code)
+    suspend fun getStreams() = api.getStreams()
 }

@@ -3,11 +3,13 @@ package online.jutter.smartsity
 import androidx.fragment.app.Fragment
 import online.jutter.smartsity.domain.models.NewsLocal
 import online.jutter.smartsity.domain.models.schedule.ScheduleLocal
+import online.jutter.smartsity.data.net.models.MemberResponse
 import online.jutter.smartsity.ui.auth.login.LoginFragment
 import online.jutter.smartsity.ui.auth.pincode.PinFragment
 import online.jutter.smartsity.ui.global.FlowGlobalFragment
 import online.jutter.smartsity.ui.leaderboard.FlowLeaderboardFragment
 import online.jutter.smartsity.ui.leaderboard.LeaderboardFragment
+import online.jutter.smartsity.ui.leaderboard.info.LeaderboardInfoFragment
 import online.jutter.smartsity.ui.main.FlowMainFragment
 import online.jutter.smartsity.ui.main.MainContainerFragment
 import online.jutter.smartsity.ui.map.FlowMapFragment
@@ -17,6 +19,7 @@ import online.jutter.smartsity.ui.map.selectroom.SelectRoomFragment
 import online.jutter.smartsity.ui.news.FlowNewsFragment
 import online.jutter.smartsity.ui.news.NewsFragment
 import online.jutter.smartsity.ui.news.detail.NewsDetailFragment
+import online.jutter.smartsity.ui.news.streams.StreamsFragment
 import online.jutter.smartsity.ui.profile.FlowProfileFragment
 import online.jutter.smartsity.ui.profile.ProfileFragment
 import online.jutter.smartsity.ui.profile.findgroup.FindGroupFragment
@@ -27,6 +30,7 @@ import online.jutter.smartsity.ui.schedule.competitiondetail.CompetitionDetailFr
 import online.jutter.smartsity.ui.schedule.successjoin.SuccessFragment
 import online.jutter.smartsity.ui.splash.SplashFragment
 import ru.terrakok.cicerone.android.support.SupportAppScreen
+import java.lang.reflect.Member
 
 object Screens {
 
@@ -70,6 +74,10 @@ object Screens {
 
     data class NewsDetail(val news: NewsLocal) : SupportAppScreen() {
         override fun getFragment(): Fragment = NewsDetailFragment.create(news)
+    }
+
+    object Streams : SupportAppScreen() {
+        override fun getFragment(): Fragment = StreamsFragment()
     }
 
     /** Расписание - роутер */
@@ -118,6 +126,10 @@ object Screens {
 
     object Leaderboard: SupportAppScreen() {
         override fun getFragment(): Fragment = LeaderboardFragment()
+    }
+
+    data class LeaderboardInfo(val members: MutableList<MemberResponse>) : SupportAppScreen() {
+        override fun getFragment() = LeaderboardInfoFragment.create(members)
     }
 
     /** Профиль - роутер */

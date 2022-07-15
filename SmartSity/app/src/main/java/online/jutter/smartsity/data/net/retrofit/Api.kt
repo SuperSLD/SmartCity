@@ -33,4 +33,7 @@ interface Api {
         @Path("name") name: String,
         @Path("code") code: String,
     ): DataWrapper<Int>
+
+    @GET("streams/all")
+    suspend fun getStreams(): DataWrapper<List<StreamResponse>>
 }
