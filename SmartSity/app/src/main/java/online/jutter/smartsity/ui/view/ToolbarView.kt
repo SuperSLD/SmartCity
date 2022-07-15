@@ -23,7 +23,6 @@ class ToolbarView : LinearLayout {
         inflate(context, R.layout.view_toolbar, this)
         addSystemTopPadding()
         setBackgroundColor(getColor(R.color.colorBackground))
-        elevation = 10f
     }
 
     fun setTitle(title: Int) {

@@ -4,9 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import online.jutter.smartsity.databinding.ItemScheduleBinding
+import online.jutter.smartsity.domain.models.SportLocal
 import online.jutter.smartsity.domain.models.schedule.ScheduleLocal
 
-class ScheduleAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ScheduleAdapter(val onCompetitionClick: (ScheduleLocal)->Unit) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val scheduleList = mutableListOf<ScheduleLocal>()
 
@@ -39,6 +40,9 @@ class ScheduleAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             with(binding) {
                 tvPlace.text = data.place.name
                 tvCompetition.text = data.sport.name
+                competitionContainer.setOnClickListener {
+                    onCompetitionClick(data)
+                }
             }
         }
 
