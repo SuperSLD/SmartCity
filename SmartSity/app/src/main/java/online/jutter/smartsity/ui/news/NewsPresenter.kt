@@ -23,10 +23,15 @@ class NewsPresenter: BasePresenter<NewsView>() {
     private val bottomVisibilityController: BottomVisibilityController by inject()
     private val getNewsUseCase: GetNewsUseCase by inject()
 
+    override fun attachView(view: NewsView?) {
+        super.attachView(view)
+
+        bottomVisibilityController.show()
+    }
+
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
 
-        bottomVisibilityController.show()
         loadList()
     }
 
