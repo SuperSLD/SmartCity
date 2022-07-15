@@ -23,6 +23,7 @@ class LoginFragment : BaseFragment(R.layout.fragment_login), MvpView {
 
         with(inPhone) {
             showTitle(R.string.auth_number)
+            setHint("Телефон")
             setDigits("0123456789")
             setImeAction(PonyInputView.ImeAction(EditorInfo.IME_ACTION_DONE) {
                 btnLogin.isEnabled = it.length > 10

@@ -8,6 +8,7 @@ import online.jutter.smartsity.domain.models.schedule.ScheduleLocal
 import online.jutter.smartsity.domain.usecases.GetScheduleListUseCase
 import online.jutter.supersld.common.base.BasePresenter
 import online.jutter.supersld.extensions.launchIO
+import online.jutter.supersld.extensions.launchUI
 import online.jutter.supersld.extensions.withUI
 import org.koin.core.inject
 
@@ -33,13 +34,11 @@ class SchedulePresenter: BasePresenter<ScheduleView>() {
     }
 
     fun loadSchedule() {
-        launchIO {
+        launchUI {
             viewState.toggleLoading(true)
-            val data = getScheduleListUseCase()
-            withUI {
-                viewState.toggleLoading(false)
-                viewState.showSchedule(data)
-            }
+            val data = withUI { getScheduleListUseCase() }
+            viewState.toggleLoading(false)
+            viewState.showSchedule(data)
         }
     }
 

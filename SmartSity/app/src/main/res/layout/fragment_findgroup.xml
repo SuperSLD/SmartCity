@@ -5,6 +5,20 @@
               android:layout_height="match_parent"
               android:gravity="center">
 
+    <online.jutter.smartsity.ui.view.ToolbarView
+            android:id="@+id/vToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    />
+
+    <online.jutter.smartsity.ui.view.PonyInputView
+            android:id="@+id/inTeam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="22dp"
+    />
+
     <FrameLayout
             android:id="@+id/listContainer"
             android:layout_width="match_parent"
@@ -18,6 +32,7 @@
                 android:layout_height="match_parent"
                 android:clipToPadding="false"
                 android:paddingHorizontal="16dp"
+                android:paddingTop="16dp"
                 android:paddingBottom="100dp"
             >
 
@@ -30,7 +45,7 @@
                     app:cardBackgroundColor="@color/colorBackground"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="8dp"
-                    android:layout_margin="16dp"
+                    android:layout_margin="22dp"
             >
 
                 <LinearLayout
@@ -41,12 +56,12 @@
                 >
 
                     <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/btnBack"
+                            android:id="@+id/btnCreate"
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             style="@style/ButtonSolid"
                             android:textColor="@color/colorTextWhite"
-                            android:text="@string/select_point_back"/>
+                            android:text="@string/create_team"/>
 
                 </LinearLayout>
 
