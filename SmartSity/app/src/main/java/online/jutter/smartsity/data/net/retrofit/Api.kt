@@ -18,10 +18,20 @@ interface Api {
     @GET("news/all")
     suspend fun getNews(): DataWrapper<List<NewsResponse>>
 
+    @GET("teams/all")
+    suspend fun getTeams(): DataWrapper<List<TeamResponse>>
+
     @GET("competitions/join/{phone}/{id}")
     suspend fun joinToCompetition(
         @Path("phone") phone: String,
         @Path("id") id: Int
+    ): DataWrapper<Int>
+
+    @GET("teams/create/{phone}/{name}/{code}")
+    suspend fun createTeam(
+        @Path("phone") phone: String,
+        @Path("name") name: String,
+        @Path("code") code: String,
     ): DataWrapper<Int>
 
     @GET("streams/all")

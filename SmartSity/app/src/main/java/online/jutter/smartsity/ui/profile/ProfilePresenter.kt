@@ -1,6 +1,7 @@
 package online.jutter.smartsity.ui.profile
 
 import com.arellomobile.mvp.InjectViewState
+import online.jutter.smartsity.Screens
 import online.jutter.smartsity.domain.controllers.BottomVisibilityController
 import online.jutter.smartsity.domain.usecases.GetProfileUseCase
 import online.jutter.supersld.common.base.BasePresenter
@@ -23,6 +24,10 @@ class ProfilePresenter: BasePresenter<ProfileView>() {
         super.onFirstViewAttach()
 
         loadProfile()
+    }
+
+    fun onFindGroup() {
+        router?.navigateTo(Screens.FindGroup)
     }
 
     private fun loadProfile() {
