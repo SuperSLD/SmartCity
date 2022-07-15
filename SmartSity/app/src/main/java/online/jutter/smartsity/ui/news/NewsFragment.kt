@@ -16,7 +16,7 @@ class NewsFragment: BaseFragment(R.layout.fragment_news), NewsView {
     @InjectPresenter
     lateinit var presenter: NewsPresenter
 
-    private val adapter by lazy {  NewsAdapter() }
+    private val adapter by lazy {  NewsAdapter(presenter::toNewsDetail) }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -28,7 +28,7 @@ class NewsFragment: BaseFragment(R.layout.fragment_news), NewsView {
             layoutManager = LinearLayoutManager(
                 context,
                 LinearLayoutManager.VERTICAL,
-                false
+                true
             )
         }
     }

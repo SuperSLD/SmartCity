@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="211dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_profile_back" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:background="@drawable/bg_news_detail"
+            app:layout_constraintTop_toBottomOf="@id/ivImage"
+            android:padding="26dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="24sp"
+                tools:text="Завтра открытие"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/tvText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                android:layout_marginTop="20dp"
+                tools:text="В 9 серии 3 сезона сериала 'Кремниевая долина' Получив негативную оценку платформы от пользователей, Ричард пытается наладить с ними контакт. Джаред принимает радикальные меры, чтобы компания не развалилась. Гевин узнает секрет друзей и пытается использовать его в своих интересах, чтобы реабилитироваться и восстановить былую славу."/>
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvText"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="16sp"
+                android:textColor="@color/colorTextSecondary"
+                android:layout_marginTop="24dp"
+                tools:text="12.05.22"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBack"
+                style="@style/ButtonSolid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Назад"
+                app:layout_constraintTop_toBottomOf="@id/tvDate"
+                android:layout_marginTop="24dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
