@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.widget.Toast
 import com.arellomobile.mvp.InjectViewState
+import online.jutter.smartsity.Screens
+import online.jutter.smartsity.domain.controllers.BottomVisibilityController
 import online.jutter.smartsity.domain.usecases.JoinToCompetitionUseCase
 import online.jutter.smartsity.ui.ext.createHandler
 import online.jutter.supersld.common.base.BasePresenter
@@ -16,6 +18,12 @@ class CompetitionDetailPresenter: BasePresenter<CompetitionDetailView>() {
 
     private val joinToCompetitionUseCase: JoinToCompetitionUseCase by inject()
     private val context: Context by inject()
+    private val bottomVisibilityController: BottomVisibilityController by inject()
+
+    override fun attachView(view: CompetitionDetailView?) {
+        super.attachView(view)
+        bottomVisibilityController.hide()
+    }
 
     @SuppressLint("ShowToast")
     fun onJoin(id: Int) {
@@ -27,7 +35,7 @@ class CompetitionDetailPresenter: BasePresenter<CompetitionDetailView>() {
             viewState.toggleLoading(true)
             withIO { joinToCompetitionUseCase(id) }
             Toast.makeText(context, "Вы записались", Toast.LENGTH_SHORT)
-            back()
+            router?.replaceScreen(Screens.Success)
         }
     }
 

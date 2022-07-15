@@ -67,5 +67,7 @@
 
     <!-- Competition -->
     <string name="join">Записаться</string>
+    <string name="success_description">Вы успешно зарегестрировались, все свои записи вы можете посмотреть в ваших результатах.</string>
+    <string name="success_button">Отлично</string>
 
 </resources>
