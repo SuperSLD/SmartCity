@@ -13,17 +13,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <include
-            layout="@layout/item_leaderboard_holder"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="24dp"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvMembers"
-            android:nestedScrollingEnabled="false"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
