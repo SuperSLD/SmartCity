@@ -5,4 +5,6 @@ class ApiService(private val api: Api) {
     suspend fun getScheduleList() = api.getSchedule()
 
     suspend fun getUserProfile(phone: String) = api.getProfile(phone)
+
+    suspend fun getNews() = api.getNews()
 }
