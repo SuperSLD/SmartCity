@@ -19,7 +19,6 @@ class MainContainerPresenter: BasePresenter<MainContainerView>() {
         super.attachView(view)
         bottomVisibilityController.show()
         viewState.initBottomNavigation()
-
     }
 
     override fun onFirstViewAttach() {
@@ -27,7 +26,6 @@ class MainContainerPresenter: BasePresenter<MainContainerView>() {
         listenChangeBottomTab()
         listenBottomNavigationVisibility()
     }
-
 
     private fun listenChangeBottomTab() {
         changeBottomTabController.state
