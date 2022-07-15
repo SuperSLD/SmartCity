@@ -9,6 +9,7 @@ import online.jutter.smartsity.ui.leaderboard.LeaderboardFragment
 import online.jutter.smartsity.ui.main.FlowMainFragment
 import online.jutter.smartsity.ui.main.MainContainerFragment
 import online.jutter.smartsity.ui.map.FlowMapFragment
+import online.jutter.smartsity.ui.map.MapFragment
 import online.jutter.smartsity.ui.news.FlowNewsFragment
 import online.jutter.smartsity.ui.news.NewsFragment
 import online.jutter.smartsity.ui.profile.FlowProfileFragment
@@ -75,7 +76,7 @@ object Screens {
     }
 
     object Map: SupportAppScreen() {
-        override fun getFragment(): Fragment = ScheduleFragment()
+        override fun getFragment(): Fragment = MapFragment()
     }
 
     /** Победители - роутер */
