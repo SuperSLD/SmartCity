@@ -22,6 +22,7 @@
     <string name="name_example">Иванов И. В.</string>
     <string name="time_example">3:34</string>
     <string name="other_players">Остальные участники</string>
+    <string name="leaderboard_info_title">Все участники</string>
 
     <string name="auth_login_title">Вход</string>
     <string name="auth_number">Номер телефона</string>
