@@ -5,6 +5,8 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.arellomobile.mvp.presenter.InjectPresenter
+import kotlinx.android.synthetic.main.fragment_schedule.*
+import kotlinx.android.synthetic.main.view_loading.*
 import online.jutter.smartsity.R
 import online.jutter.smartsity.databinding.FragmentScheduleBinding
 import online.jutter.smartsity.domain.models.schedule.ScheduleDateLocal
@@ -63,5 +65,7 @@ class ScheduleFragment: BaseFragment(R.layout.fragment_schedule), ScheduleView {
 
     override fun toggleLoading(show: Boolean) {
         binding.srl.isRefreshing = show
+        loading.visibility = if (show) View.VISIBLE else View.GONE
+        rvSchedule.visibility = if (show) View.GONE else View.VISIBLE
     }
 }

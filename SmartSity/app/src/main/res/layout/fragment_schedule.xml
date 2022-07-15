@@ -35,4 +35,6 @@
 
     </androidx.core.widget.NestedScrollView>
 
+    <include layout="@layout/view_loading"/>
+
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
