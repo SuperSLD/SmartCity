@@ -15,7 +15,7 @@ class LeaderboardFragment: BaseFragment(R.layout.fragment_leadeboard), Leaderboa
     @InjectPresenter
     lateinit var presenter: LeaderboardPresenter
 
-    private val adapter by lazy { LeaderBoardAdapter() }
+    private val adapter by lazy { LeaderBoardAdapter(presenter::leaderboardInfo) }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

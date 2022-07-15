@@ -1,11 +1,13 @@
 package online.jutter.smartsity
 
 import androidx.fragment.app.Fragment
+import online.jutter.smartsity.data.net.models.MemberResponse
 import online.jutter.smartsity.ui.auth.login.LoginFragment
 import online.jutter.smartsity.ui.auth.pincode.PinFragment
 import online.jutter.smartsity.ui.global.FlowGlobalFragment
 import online.jutter.smartsity.ui.leaderboard.FlowLeaderboardFragment
 import online.jutter.smartsity.ui.leaderboard.LeaderboardFragment
+import online.jutter.smartsity.ui.leaderboard.info.LeaderboardInfoFragment
 import online.jutter.smartsity.ui.main.FlowMainFragment
 import online.jutter.smartsity.ui.main.MainContainerFragment
 import online.jutter.smartsity.ui.map.FlowMapFragment
@@ -20,6 +22,7 @@ import online.jutter.smartsity.ui.schedule.FlowScheduleFragment
 import online.jutter.smartsity.ui.schedule.ScheduleFragment
 import online.jutter.smartsity.ui.splash.SplashFragment
 import ru.terrakok.cicerone.android.support.SupportAppScreen
+import java.lang.reflect.Member
 
 object Screens {
 
@@ -97,6 +100,10 @@ object Screens {
 
     object Leaderboard: SupportAppScreen() {
         override fun getFragment(): Fragment = LeaderboardFragment()
+    }
+
+    data class LeaderboardInfo(val members: MutableList<MemberResponse>) : SupportAppScreen() {
+        override fun getFragment() = LeaderboardInfoFragment.create(members)
     }
 
     /** Профиль - роутер */
