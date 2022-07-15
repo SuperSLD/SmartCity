@@ -17,4 +17,10 @@ interface Api {
 
     @GET("users/get/{phone}")
     suspend fun getProfile(@Path("phone") phone: String): DataWrapper<ProfileResponse>
+
+    @GET("competitions/join/{phone}/{id}")
+    suspend fun joinToCompetition(
+        @Path("phone") phone: String,
+        @Path("id") id: Int
+    ): DataWrapper<Int>
 }

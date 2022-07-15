@@ -1,7 +1,9 @@
 package online.jutter.smartsity.ui.schedule
 
 import com.arellomobile.mvp.InjectViewState
+import online.jutter.smartsity.Screens
 import online.jutter.smartsity.common.base.BaseView
+import online.jutter.smartsity.domain.models.schedule.ScheduleLocal
 import online.jutter.smartsity.domain.usecases.GetScheduleListUseCase
 import online.jutter.supersld.common.base.BasePresenter
 import online.jutter.supersld.extensions.launchIO
@@ -17,6 +19,10 @@ class SchedulePresenter: BasePresenter<ScheduleView>() {
         super.onFirstViewAttach()
 
         loadSchedule()
+    }
+
+    fun onCompetitionClick(item: ScheduleLocal) {
+        router?.navigateTo(Screens.CompetitionDetail(item))
     }
 
     fun loadSchedule() {

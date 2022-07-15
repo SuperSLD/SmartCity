@@ -17,7 +17,7 @@ fun Module.provideUseCases() {
     single { GetScheduleListUseCase(get()) }
     single { GetLeaderBoardUserCase(get()) }
     single { GetProfileUseCase(get(), get()) }
-//    single { SaveHomeMarkerUseCase(get()) }
+    single { JoinToCompetitionUseCase(get(), get()) }
 }
 
 fun Module.provideControllers() {

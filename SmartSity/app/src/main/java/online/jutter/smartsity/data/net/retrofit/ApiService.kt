@@ -7,4 +7,6 @@ class ApiService(private val api: Api) {
     suspend fun getLeaderBoardList() = api.getLeaderBoard()
 
     suspend fun getUserProfile(phone: String) = api.getProfile(phone)
+
+    suspend fun joinToCompetition(phone: String, id: Int) = api.joinToCompetition(phone, id)
 }

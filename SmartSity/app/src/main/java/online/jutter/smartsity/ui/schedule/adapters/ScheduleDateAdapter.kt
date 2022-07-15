@@ -10,7 +10,7 @@ import online.jutter.smartsity.domain.models.schedule.ScheduleLocal
 import online.jutter.smartsity.ui.ext.SpaceBetweenItemDecoration
 import online.jutter.smartsity.ui.ext.dpToPx
 
-class ScheduleDateAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ScheduleDateAdapter(val onCompetitionClick: (ScheduleLocal)->Unit) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val scheduleEvents = mutableListOf<ScheduleDateLocal>()
 
@@ -39,7 +39,7 @@ class ScheduleDateAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     inner class ScheduleViewHolder(private val binding: ItemScheduleDateBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        private val adapter = ScheduleTimeAdapter()
+        private val adapter = ScheduleTimeAdapter(onCompetitionClick)
 
         init {
             binding.rvSchedule.run {
