@@ -14,16 +14,20 @@
             android:layout_height="wrap_content"/>
 
         <include
+            android:id="@+id/vTopMembers"
             layout="@layout/item_leaderboard_holder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="24dp"/>
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvMembers"
             android:nestedScrollingEnabled="false"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_marginTop="11dp"/>
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
