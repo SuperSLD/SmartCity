@@ -20,6 +20,6 @@ class App : AppBase(appModule = appModule()) {
             }
         )
 
-        RMMapView.setMapId(RMMapID.MAI)
+        RMMapView.setMapId(RMMapID.SARATOV)
     }
 }

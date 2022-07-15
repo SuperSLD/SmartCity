@@ -90,7 +90,7 @@ dependencies {
     implementation 'online.jutter.supersld:diffadapter:2.0.0'
     implementation 'online.jutter.supersld:jutter_core:2.1.3'
     implementation 'online.jutter.supersld:jutter_ui_kit:1.4.10'
-    implementation 'online.jutter.supersld:roadmapview:0.1.4'
+    implementation 'online.jutter.supersld:roadmapview:0.1.5'
 
     // ввод с маской
     implementation 'com.redmadrobot:input-mask-android:6.0.0'
