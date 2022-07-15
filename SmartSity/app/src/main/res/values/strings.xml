@@ -73,4 +73,5 @@
     <!-- Teams -->
     <string name="create_team">Создать команду</string>
     <string name="search">Поиск</string>
+    <string name="create_team_text">Вы можете создать свою команду, для участия в командных состязаниях.</string>
 </resources>

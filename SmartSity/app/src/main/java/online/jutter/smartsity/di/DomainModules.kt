@@ -20,6 +20,7 @@ fun Module.provideUseCases() {
     single { GetNewsUseCase(get()) }
     single { GetTeamsUseCase(get()) }
     single { JoinToCompetitionUseCase(get(), get()) }
+    single { CreateTeamUseCase(get(), get()) }
 }
 
 fun Module.provideControllers() {

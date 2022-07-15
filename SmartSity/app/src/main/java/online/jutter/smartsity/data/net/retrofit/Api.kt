@@ -26,4 +26,11 @@ interface Api {
         @Path("phone") phone: String,
         @Path("id") id: Int
     ): DataWrapper<Int>
+
+    @GET("teams/create/{phone}/{name}/{code}")
+    suspend fun createTeam(
+        @Path("phone") phone: String,
+        @Path("name") name: String,
+        @Path("code") code: String,
+    ): DataWrapper<Int>
 }

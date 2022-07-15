@@ -48,7 +48,7 @@ class FindGroupFragment : BaseFragment(R.layout.fragment_findgroup), FindGroupVi
 
         binding.listContainer.addSystemTopAndBottomPadding()
         binding.rvRooms.addSystemTopAndBottomPadding()
-        binding.btnCreate.setOnClickListener { onBackPressed() }
+        binding.btnCreate.setOnClickListener { presenter.onCreateTeam() }
 
         initRecycler()
     }
